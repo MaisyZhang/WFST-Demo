@@ -1,3 +1,4 @@
 # WFST-Demo: 拼音输入法
 
-### Usage: see `run.sh`
+### Usage: 
+          see `run.sh`
