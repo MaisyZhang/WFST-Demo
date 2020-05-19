@@ -12,6 +12,8 @@ if [ $stage -le 0 ]; then
     # 训练1元N-gram语言模型，构建G.fst
     lmplz -o 1 --verbose_header --text text.txt --arpa text.arpa
     arpa2fst text.arpa G.fst
+    fstdraw --isymbols=words.txt --osymbols=words.txt G.fst > G.dot
+    dot -Tsvg G.dot > G.svg
 fi
 
 if [ $stage -le 1 ]; then
